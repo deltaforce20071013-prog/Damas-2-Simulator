@@ -402,7 +402,7 @@ function physics(delta) {
   });
 
   if (velocity > 0.1) {
-    car.rotation.y -= steeringAngle * velocity * delta * 0.018;
+    car.rotation.y += steeringAngle * velocity * delta * 0.018;
   }
 
   car.position.x += Math.sin(car.rotation.y) * velocity * delta;
